@@ -65,10 +65,11 @@ void DisplayMenu(Menu *menu, int screenWidth, int screenHeight) {
 
         ClearBackground(BLACK);
         DrawTextureEx(linkSprite, spritePosition, spriteRotation, spriteScale, WHITE);
-        DrawText("ZINF", width, initialHeight - 350, 160, WHITE);
-        DrawText("Press ENTER to start", width, initialHeight, 30, WHITE);
-        DrawText("Press S to enter the Scoreboard", width, initialHeight + 75, 30, WHITE);
-        DrawText("Press X to exit", width, initialHeight + 2 * 75, 30, WHITE);
+        // Ajustei a posição e o tamanho da fonte para a palavra *ZINF*
+        DrawText("ZINF", screenWidth / 2 - MeasureText("ZINF", 160) / 2, initialHeight - 250, 160, YELLOW);
+        DrawText("Press ENTER to start", width, initialHeight, 30, YELLOW);
+        DrawText("Press S to enter the Scoreboard", width, initialHeight + 75, 30, YELLOW);
+        DrawText("Press X to exit", width, initialHeight + 2 * 75, 30, YELLOW);
 
         EndDrawing();
 
